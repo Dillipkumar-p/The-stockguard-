@@ -40,6 +40,7 @@ def home():
 
 @app.route("/api/products", methods=["GET"])
 def get_products():
+    initialize_database()
     search = request.args.get("q", "").strip()
 
     with get_connection() as connection:
@@ -138,7 +139,7 @@ def delete_product(product_id):
 
     return jsonify({"message": "Product deleted successfully."})
 
+initialize_database()
 
 if __name__ == "__main__":
-    initialize_database()
     app.run(debug=True)
