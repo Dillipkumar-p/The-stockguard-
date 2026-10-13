@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStock | Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="search">
+    <aside class="sidebar">
+        <h2>SmartStock</h2>
+        <p>Inventory Management</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="add-product.html">Add Product</a>
+            <a class="active" href="search.html">Search Products</a>
+            <a href="delete.html">Delete Products</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <div>
+                <h1>Search Products</h1>
+                <p>Find products by name or category.</p>
+            </div>
+        </header>
+
+        <section class="panel">
+            <label for="searchInput">Product name or category</label>
+            <input id="searchInput" type="search"
+                   placeholder="Type to search..." autofocus>
+
+            <p id="resultCount" aria-live="polite"></p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Expiry Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

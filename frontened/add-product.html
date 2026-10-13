@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStock | Add Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="add">
+    <aside class="sidebar">
+        <h2>SmartStock</h2>
+        <p>Inventory Management</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a class="active" href="add-product.html">Add Product</a>
+            <a href="search.html">Search Products</a>
+            <a href="delete.html">Delete Products</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <div>
+                <h1>Add New Product</h1>
+                <p>Enter the product details below.</p>
+            </div>
+        </header>
+
+        <section class="panel">
+            <form id="productForm">
+                <label for="productName">Product Name</label>
+                <input id="productName" required maxlength="100"
+                       placeholder="Example: Milk">
+
+                <label for="category">Category</label>
+                <input id="category" required maxlength="60"
+                       placeholder="Example: Dairy">
+
+                <label for="quantity">Quantity</label>
+                <input id="quantity" type="number" min="0"
+                       step="1" required placeholder="Enter quantity">
+
+                <label for="expiryDate">Expiry Date</label>
+                <input id="expiryDate" type="date" required>
+
+                <button type="submit">Save Product</button>
+                <p id="message" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStock | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+    <aside class="sidebar">
+        <h2>SmartStock</h2>
+        <p>Inventory Management</p>
+        <nav>
+            <a class="active" href="index.html">Home</a>
+            <a href="add-product.html">Add Product</a>
+            <a href="search.html">Search Products</a>
+            <a href="delete.html">Delete Products</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <div>
+                <h1>Product Inventory</h1>
+                <p>View your products and their expiry status.</p>
+            </div>
+            <a class="button-link" href="add-product.html">+ Add Product</a>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Total Products</p>
+                <h2 id="totalProducts">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Low Stock</p>
+                <h2 id="lowStock">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Expiring Soon</p>
+                <h2 id="expiringSoon">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Expired</p>
+                <h2 id="expiredProducts">0</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>All Products</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Expiry Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryBody"></tbody>
+                </table>
+            </div>
+            <p id="message" role="status"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
