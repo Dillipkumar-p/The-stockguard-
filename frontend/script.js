@@ -1,4 +1,3 @@
-
 const API_URL = "https://the-stockguard.onrender.com/api/products";
 
 const productForm = document.getElementById("productForm");
